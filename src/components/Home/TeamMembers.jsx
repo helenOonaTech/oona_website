@@ -53,7 +53,7 @@ function TeamMembers() {
   const swiperRefs = useRef();
   const [swiperRef, setSwiperRef] = useState(null);
   return (
-    <section className="pb-8 pt-4  relative h-[750px] flex items-end transition-all">
+    <section className="pb-8 pt-4  relative md:h-[750px] h-[500px] overflow-hidden flex items-end transition-all overflow-x-hidden">
       <div className="absolute opacity-10 text-center w-full mx-auto h-full transition-all">
         <img
           src={members[sliderInd]?.img}
@@ -65,11 +65,11 @@ function TeamMembers() {
         </h3>
       </div>
       <section className="custom_container">
-        <h3 className="font-bold text-[#201919] transition-all text-[22px] absolute top-24 ">
+        <h3 className="font-bold text-[#201919] transition-all text-[22px] absolute md:top-24 top-10">
           Team members
         </h3>
 
-        <section className="ml-8 members_slider">
+        <section className="md:ml-8 members_slider">
           <Swiper
             onSwiper={setSwiperRef}
             slidesPerView={3}

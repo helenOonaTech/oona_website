@@ -8,10 +8,10 @@ function PriceCard({ active }) {
         $99{" "}
         <span className="text-[20px] text-[#BFBFBF] font-normal">/month</span>
       </h3>
-      <span className="text-sm font-bold text-[#202020] mt-7">
+      <span className="text-sm font-bold text-[#202020] md:mt-7 mt-4">
         10-100 users
       </span>
-      <p className="text-[#787878] font-normal text-xs mt-3 pb-5 border-b border-[#E4E4E4]">
+      <p className="text-[#787878] font-normal text-xs md:mt-3 mt-2 pb-5 border-b border-[#E4E4E4]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -41,8 +41,10 @@ function PriceCard({ active }) {
         </ul>
       </div>
       <button
-        className={` text-base font-bold mt-8 w-full py-3 rounded-[15px] border-[#00A7E1] border text-center ${
-          active ? " text-white bg-[#00A7E1]" : " text-[#00A7E1] bg-white"
+        className={` md:text-base text-sm font-bold md:mt-8 mt-3 w-full transition-all md:py-3 py-2 md:rounded-[15px] rounded-[12px] border-[#00A7E1] border text-center  ${
+          active
+            ? " text-white bg-[#00A7E1] hover:bg-white hover:text-[#00A7E1]"
+            : " text-[#00A7E1] bg-white hover:bg-[#00A7E1] hover:text-white"
         }`}
       >
         Get Started

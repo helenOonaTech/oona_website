@@ -13,9 +13,9 @@ function PricePlan() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua
         </p>
-        <div className="switch_price bg-[#FAFAFA] text-center flex items-center justify-center gap-16 font-normal text-[#333232] text-base py-3 mt-4">
+        <div className="switch_price bg-[#FAFAFA] text-center flex items-center justify-center md:gap-16 gap-10 font-normal text-[#333232] text-base py-3 mt-4">
           <button
-            className={` text-base relative px-2 ${
+            className={` text-base relative px-2 transition-all hover:text-[#00A7E1]  ${
               active == 1 && "text-[#00A7E1] active_tab"
             }`}
             onClick={() => setActive(1)}
@@ -23,7 +23,7 @@ function PricePlan() {
             In Promise
           </button>
           <button
-            className={` text-base relative px-2 ${
+            className={` text-base relative px-2 hover:text-[#00A7E1] transition-all ${
               active == 2 && "text-[#00A7E1] active_tab"
             }`}
             onClick={() => setActive(2)}
@@ -31,7 +31,7 @@ function PricePlan() {
             Cloud
           </button>
           <button
-            className={` text-base relative px-2 ${
+            className={` text-base relative px-2 hover:text-[#00A7E1] transition-all ${
               active == 3 && "text-[#00A7E1] active_tab"
             }`}
             onClick={() => setActive(3)}
@@ -39,27 +39,30 @@ function PricePlan() {
             Resale
           </button>
         </div>
-        <div className="cards flex gap-6 mt-10">
+        <div
+          className="cards flex md:flex-row flex-col gap-6 mt-10"
+          // data-aos="fade-up"
+          // data-aos-duration="1500"
+        >
           {active == 1 ? (
             <>
-              {" "}
               <PriceCard />
+
               <PriceCard active />
+
               <PriceCard />
             </>
           ) : active == 2 ? (
             <>
-              {" "}
-              {/* <PriceCard /> */}
-              <PriceCard active />
+              <PriceCard />
+
               <PriceCard />
             </>
           ) : (
             <>
-              {" "}
-              <PriceCard />
               <PriceCard active />
-              {/* <PriceCard /> */}
+
+              <PriceCard />
             </>
           )}
         </div>

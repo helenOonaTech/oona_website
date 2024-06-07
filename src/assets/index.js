@@ -29,8 +29,12 @@ import noCareer from "./no-career.svg";
 import path from "./Path.svg";
 import ourProjectImg from "./our_project_img.svg";
 import blueArrow from "./blueArrow.svg";
+import star from "./Star4.svg";
+import modalImg from "./modal.svg";
 export {
   logo,
+  star,
+  modalImg,
   blueArrow,
   ourProjectImg,
   productsLand,
